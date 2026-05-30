@@ -1,0 +1,575 @@
+/* =========================
+   CART MAIN CONTAINER
+========================= */
+.cart {
+  width: 100%;
+  margin-top: 100px;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: fadeIn 0.6s ease;
+}
+
+/* =========================
+   COMMON GRID
+========================= */
+.cart-item-title,
+.cart-items-item {
+  display: grid;
+  grid-template-columns:
+    minmax(70px, 0.8fr)
+    minmax(140px, 2fr)
+    minmax(70px, 1fr)
+    minmax(70px, 1fr)
+    minmax(80px, 1fr)
+    minmax(40px, 0.5fr);
+
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+/* =========================
+   HEADER STYLE
+========================= */
+.cart-item-title {
+  color: #777;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.cart-item-title p:hover {
+  color: tomato;
+  transform: translateY(-2px);
+  transition: 0.3s ease;
+}
+
+/* =========================
+   ITEM ROW STYLE
+========================= */
+.cart-items-item {
+  padding: 14px 10px;
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* ROW HOVER EFFECT */
+.cart-items-item:hover {
+  background: #fff7f5;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* TEXT HOVER */
+.cart-items-item p {
+  transition: 0.3s ease;
+}
+
+.cart-items-item p:hover {
+  color: tomato;
+}
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+.cart-items-item-img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  transition: all 0.4s ease;
+}
+
+/* IMAGE HOVER */
+.cart-items-item-img:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   REMOVE BUTTON
+========================= */
+.remove-btn {
+  cursor: pointer;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* REMOVE BUTTON HOVER */
+.remove-btn:hover {
+  transform: scale(1.3) rotate(180deg);
+  color: darkred;
+}
+
+/* =========================
+   HORIZONTAL LINE
+========================= */
+.cart hr {
+  border: none;
+  height: 1px;
+  background: #e5e5e5;
+  margin: 10px 0;
+  transition: 0.3s ease;
+}
+
+.cart hr:hover {
+  background: tomato;
+}
+
+/* =========================
+   BUTTONS (IF ANY)
+========================= */
+.cart button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: tomato;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart button:hover {
+  background: #ff4d2d;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255,99,71,0.3);
+}
+
+/* =========================
+   FADE ANIMATION
+========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+
+  .cart {
+    padding: 15px;
+  }
+
+  .cart-item-title,
+  .cart-items-item {
+    grid-template-columns:
+      60px
+      1.5fr
+      80px
+      70px
+      80px
+      40px;
+
+    gap: 10px;
+  }
+
+  .cart-item-title {
+    font-size: 13px;
+  }
+
+  .cart-items-item {
+    font-size: 14px;
+  }
+
+  .cart-items-item-img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+  .cart {
+    margin-top: 80px;
+    padding: 10px;
+  }
+
+  .cart-item-title,
+  .cart-items-item {
+    grid-template-columns:
+      55px
+      1.5fr
+      70px
+      60px
+      70px
+      30px;
+
+    gap: 8px;
+  }
+
+  .cart-item-title {
+    font-size: 12px;
+  }
+
+  .cart-items-item {
+    font-size: 12px;
+  }
+
+  .cart-items-item-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .remove-btn {
+    font-size: 18px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE DEVICES
+========================= */
+@media (max-width: 480px) {
+
+  .cart {
+    padding: 5px;
+  }
+
+  .cart-item-title,
+  .cart-items-item {
+    grid-template-columns:
+      45px
+      1.3fr
+      55px
+      50px
+      60px
+      25px;
+
+    gap: 5px;
+  }
+
+  .cart-item-title {
+    font-size: 10px;
+  }
+
+  .cart-items-item {
+    font-size: 11px;
+  }
+
+  .cart-items-item-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+  }
+
+  .remove-btn {
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   EXTRA SMALL DEVICES
+========================= */
+@media (max-width: 360px) {
+
+  .cart-item-title,
+  .cart-items-item {
+    grid-template-columns:
+      40px
+      1fr
+      45px
+      45px
+      50px
+      20px;
+
+    gap: 4px;
+  }
+
+  .cart-item-title {
+    font-size: 9px;
+  }
+
+  .cart-items-item {
+    font-size: 10px;
+  }
+
+  .cart-items-item-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .remove-btn {
+    font-size: 14px;
+  }
+}
+.cart hr{
+    background-color: #000;
+    height: 2px;
+}
+/* =========================
+   CART BOTTOM SECTION
+========================= */
+.cart-bottom{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.6s ease;
+}
+
+/* =========================
+   CART TOTAL BOX
+========================= */
+.cart-total{
+    flex: 1;
+    min-width: 320px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.cart-total:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.cart-total h2{
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #222;
+}
+
+/* =========================
+   TOTAL DETAILS
+========================= */
+.cart-total-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    transition: 0.3s ease;
+}
+
+.cart-total-details:hover{
+    padding-left: 8px;
+    color: tomato;
+}
+
+.cart-total-details b{
+    color: #000;
+}
+
+/* =========================
+   CHECKOUT BUTTON
+========================= */
+.cart-total button{
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    outline: none;
+    background: tomato;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cart-total button:hover{
+    background: #ff4d2d;
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(255,99,71,0.3);
+}
+
+/* =========================
+   PROMO CODE SECTION
+========================= */
+.cart-prompcode{
+    flex: 1;
+    min-width: 320px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.cart-prompcode:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.cart-prompcode p{
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 18px;
+    transition: 0.3s ease;
+}
+
+.cart-prompcode p:hover{
+    color: tomato;
+}
+
+/* =========================
+   PROMO INPUT BOX
+========================= */
+.cart-promocpde-input{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.cart-promocpde-input:hover{
+    background: #efefef;
+}
+
+/* INPUT */
+.cart-promocpde-input input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.cart-promocpde-input input:focus{
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(255,99,71,0.2);
+}
+
+/* BUTTON */
+.cart-promocpde-input button{
+    border: none;
+    outline: none;
+    padding: 12px 18px;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.cart-promocpde-input button:hover{
+    background: tomato;
+    transform: scale(1.05);
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+@media (max-width: 992px){
+
+    .cart-bottom{
+        gap: 25px;
+    }
+
+    .cart-total,
+    .cart-prompcode{
+        padding: 20px;
+    }
+
+    .cart-total h2{
+        font-size: 24px;
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px){
+
+    .cart-bottom{
+        flex-direction: column;
+    }
+
+    .cart-total,
+    .cart-prompcode{
+        width: 100%;
+    }
+
+    .cart-total-details{
+        font-size: 14px;
+    }
+
+    .cart-promocpde-input{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cart-promocpde-input button{
+        width: 100%;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px){
+
+    .cart-total,
+    .cart-prompcode{
+        padding: 15px;
+        border-radius: 14px;
+    }
+
+    .cart-total h2{
+        font-size: 22px;
+    }
+
+    .cart-total-details{
+        font-size: 13px;
+    }
+
+    .cart-prompcode p{
+        font-size: 14px;
+    }
+
+    .cart-promocpde-input input{
+        font-size: 13px;
+    }
+
+    .cart-promocpde-input button{
+        font-size: 13px;
+        padding: 10px;
+    }
+}

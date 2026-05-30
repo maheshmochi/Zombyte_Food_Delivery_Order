@@ -1,0 +1,324 @@
+.my-orders {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 5%;
+    background: #f8f9fa;
+}
+
+.my-orders h2 {
+    margin-bottom: 25px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ORDER CARD */
+
+.my-orders-order {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.my-orders-order:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.my-orders-order img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.order-info {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.items {
+    flex: 2;
+    min-width: 200px;
+
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.amount {
+    font-size: 22px;
+    font-weight: 700;
+    color: tomato;
+    margin: 0;
+    min-width: 90px;
+}
+
+.count {
+    color: #666;
+    margin: 0;
+    min-width: 80px;
+}
+
+.status {
+    margin: 0;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.delivered {
+    background: #e8f8ee;
+    color: #16a34a;
+}
+
+.out {
+    background: #fff7e6;
+    color: #f59e0b;
+}
+
+.processing {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+.track-btn {
+    border: none;
+    cursor: pointer;
+
+    background: tomato;
+    color: white;
+
+    padding: 10px 18px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.track-btn:hover {
+    background: #e2471b;
+}
+
+/* EMPTY STATE */
+
+.empty {
+    background: white;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.empty img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.empty p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* LOADING */
+
+.container > p {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    padding: 40px;
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 992px) {
+
+    .my-orders {
+        padding: 20px;
+    }
+
+    .my-orders h2 {
+        font-size: 28px;
+    }
+
+    .order-info {
+        gap: 10px;
+    }
+
+    .amount {
+        font-size: 18px;
+    }
+
+    .track-btn {
+        padding: 9px 14px;
+    }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .my-orders {
+        padding: 15px;
+    }
+
+    .my-orders h2 {
+        font-size: 24px;
+    }
+
+    .my-orders-order {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .my-orders-order img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .order-info {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .items,
+    .amount,
+    .count,
+    .status {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .amount {
+        font-size: 20px;
+    }
+
+    .track-btn {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* ========================= */
+/* SMALL MOBILE */
+/* ========================= */
+
+@media (max-width: 480px) {
+
+    .my-orders {
+        padding: 12px;
+    }
+
+    .my-orders h2 {
+        font-size: 22px;
+    }
+
+    .items {
+        font-size: 13px;
+    }
+
+    .amount {
+        font-size: 18px;
+    }
+
+    .count {
+        font-size: 13px;
+    }
+
+    .status {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .track-btn {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+.my {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+
+    margin-bottom: 25px;
+
+    position: relative;
+    display: inline-block;
+
+    letter-spacing: 0.5px;
+}
+
+/* Underline Effect */
+
+.my::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 60%;
+    height: 4px;
+
+    background: tomato;
+
+    border-radius: 20px;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .my {
+        font-size: 28px;
+    }
+
+    .my::after {
+        height: 3px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .my {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .my::after {
+        width: 50%;
+        height: 3px;
+    }
+}

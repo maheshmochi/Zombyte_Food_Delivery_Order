@@ -1,0 +1,152 @@
+/* MAIN WRAPPER */
+.order {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #f7f8fc;
+  min-height: 100vh;
+}
+
+.order h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* ORDER LIST GRID */
+.order-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* ORDER CARD */
+.order-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* LEFT ICON */
+.order-img {
+  font-size: 32px;
+  background: #f0f4ff;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+/* ORDER ITEMS */
+.order-items {
+  flex: 1;
+}
+
+.order-items p {
+  margin: 0 0 10px;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.order-items span {
+  font-weight: 500;
+}
+
+/* ADDRESS */
+.order-address {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed #ddd;
+}
+
+.order-address p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* RIGHT SECTION */
+.order-right {
+  min-width: 140px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-right p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* PRICE HIGHLIGHT */
+.order-right p b:last-child {
+  color: #2e7d32;
+  font-size: 16px;
+}
+
+/* STATUS DROPDOWN */
+.order-right select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  font-size: 13px;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.order-right select:hover {
+  border-color: #4a90e2;
+}
+
+.order-right select:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .order-card {
+    flex-direction: column;
+  }
+
+  .order-right {
+    width: 100%;
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .order-img {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .order {
+    padding: 12px;
+  }
+
+  .order h2 {
+    font-size: 22px;
+  }
+
+  .order-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

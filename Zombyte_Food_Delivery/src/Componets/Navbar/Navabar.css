@@ -1,0 +1,747 @@
+/* ================= NAVBAR ================= */
+
+.navbar {
+    width: 100%;
+    padding: 14px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-sizing: border-box;
+}
+
+/* ================= LEFT ================= */
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 140px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.03);
+}
+
+/* ================= HAMBURGER ================= */
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* ================= MENU ================= */
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    cursor: pointer;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar-menu li a:hover,
+.navbar-menu li a.active {
+    color: tomato;
+}
+
+/* ================= RIGHT ================= */
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* ================= ICONS ================= */
+
+.search_logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search_logo:hover {
+    transform: scale(1.1);
+}
+
+/* ================= CART ================= */
+
+.navbar-search-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+
+    width: 10px;
+    height: 10px;
+
+    background: tomato;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* ================= BUTTON ================= */
+
+.Sign_in {
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    padding: 10px 20px;
+
+    background: tomato;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.Sign_in:hover {
+    background: #e6491c;
+}
+
+/* ================= PROFILE ================= */
+
+.navbar-profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-icon {
+    font-size: 22px;
+    color: #333;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background: #f5f5f5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.user-icon:hover {
+    background: #ececec;
+}
+
+/* ================= DROPDOWN ================= */
+
+.nav-profile-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    width: 180px;
+
+    background: white;
+    border-radius: 12px;
+
+    padding: 10px;
+
+    list-style: none;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+
+    z-index: 100;
+}
+
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 10px;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-profile-dropdown li:hover {
+    background: #fff2ed;
+}
+
+.nav-profile-dropdown li i {
+    font-size: 16px;
+    color: tomato;
+}
+
+.nav-profile-dropdown li p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.nav-profile-dropdown hr {
+    border: none;
+    height: 1px;
+    background: #eee;
+    margin: 8px 0;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 12px 4%;
+    }
+
+    .navbar-menu {
+        gap: 20px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .search_logo {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+
+        display: none;
+        flex-direction: column;
+
+        background: white;
+        padding: 20px;
+
+        gap: 18px;
+
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-right {
+        gap: 12px;
+    }
+
+    .logo {
+        width: 110px;
+    }
+
+    .search_logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .Sign_in {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .user-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 10px 4%;
+    }
+
+    .logo {
+        width: 95px;
+    }
+
+    .Sign_in {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+
+    .search_logo {
+        width: 18px;
+        height: 18px;
+    }
+
+    .user-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+
+    .nav-profile-dropdown {
+        width: 160px;
+    }
+}
+/* ================= MOBILE SIDEBAR ================= */
+
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: -320px;
+
+    width: 280px;
+    max-width: 85%;
+
+    height: 100vh;
+
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(10px);
+
+    padding: 25px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    z-index: 1001;
+
+    transition: all 0.35s ease;
+
+    box-shadow: 10px 0 30px rgba(0,0,0,0.15);
+
+    overflow-y: auto;
+}
+
+.mobile-sidebar.open {
+    left: 0;
+}
+
+/* ================= OVERLAY ================= */
+
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(2px);
+
+    z-index: 1000;
+
+    animation: fadeIn 0.3s ease;
+}
+
+/* ================= CLOSE ================= */
+
+.close-btn {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin-bottom: 15px;
+}
+
+.close-btn:hover {
+    background: #f5f5f5;
+    transform: rotate(90deg);
+}
+
+/* ================= MENU ITEMS ================= */
+
+.mobile-sidebar li {
+    list-style: none;
+}
+
+.mobile-sidebar li a {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    padding: 14px 16px;
+
+    border-radius: 12px;
+
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+
+.mobile-sidebar li a:hover {
+    background: #fff1eb;
+
+    color: tomato;
+
+    transform: translateX(6px);
+}
+
+/* Active */
+
+.mobile-sidebar li a.active {
+    background: tomato;
+    color: white;
+}
+
+/* ================= SIDEBAR LOGO ================= */
+
+.sidebar-logo {
+    padding-bottom: 18px;
+    margin-bottom: 10px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-logo img {
+    width: 120px;
+}
+
+/* ================= PROFILE ================= */
+
+.sidebar-profile {
+    margin-top: auto;
+
+    border-top: 1px solid #eee;
+
+    padding-top: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.sidebar-profile i {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f5f5f5;
+
+    border-radius: 50%;
+}
+
+.sidebar-profile span {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* ================= SCROLLBAR ================= */
+
+.mobile-sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.mobile-sidebar::-webkit-scrollbar-thumb {
+    background: tomato;
+    border-radius: 10px;
+}
+
+/* ================= HAMBURGER ================= */
+
+.hamburger {
+    display: none;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.hamburger:hover {
+    color: tomato;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar {
+        padding: 12px 4%;
+    }
+
+    .logo {
+        width: 110px;
+    }
+
+    .navbar-right {
+        gap: 12px;
+    }
+
+    .search_logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .user-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .Sign_in {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .mobile-sidebar {
+        width: 250px;
+    }
+
+    .logo {
+        width: 95px;
+    }
+
+    .search_logo {
+        width: 18px;
+        height: 18px;
+    }
+
+    .Sign_in {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+
+    .user-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+
+    .nav-profile-dropdown {
+        width: 160px;
+    }
+}
+
+/* ================= DESKTOP ================= */
+
+@media (min-width: 769px) {
+
+    .mobile-sidebar,
+    .sidebar-overlay {
+        display: none;
+    }
+}
+.search_icon i {
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search_icon i:hover {
+    color: tomato;
+    transform: scale(1.1);
+}
+/* Navbar Premium Shadow */
+
+.navbar{
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+/* Search Icon */
+
+.search_icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+
+.search_icon i{
+    font-size:20px;
+    color:#333;
+    transition:all .3s ease;
+}
+
+.search_icon:hover i{
+    color:tomato;
+    transform:scale(1.15);
+}
+
+/* Cart Hover */
+
+.navbar-search-icon img{
+    transition:.3s;
+}
+
+.navbar-search-icon:hover img{
+    transform:scale(1.1);
+}
+
+/* Dot Animation */
+
+.dot{
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.3);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* Profile Hover */
+
+.user-icon:hover{
+    transform:scale(1.08);
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Dropdown Animation */
+
+.nav-profile-dropdown{
+    animation:dropdownShow .25s ease;
+    transform-origin:top right;
+}
+
+@keyframes dropdownShow{
+    from{
+        opacity:0;
+        transform:translateY(-10px) scale(.95);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* Sidebar Smooth */
+
+.mobile-sidebar{
+    transition:left .35s ease-in-out;
+}
+
+/* Sidebar Item Hover */
+
+.mobile-sidebar li a{
+    position:relative;
+    overflow:hidden;
+}
+
+.mobile-sidebar li a::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:4px;
+    height:100%;
+    background:tomato;
+    transform:scaleY(0);
+    transition:.3s;
+}
+
+.mobile-sidebar li a:hover::before{
+    transform:scaleY(1);
+}
+
+/* Sign In Premium */
+
+.Sign_in{
+    box-shadow:0 4px 12px rgba(255,99,71,.25);
+}
+
+.Sign_in:hover{
+    transform:translateY(-2px);
+}

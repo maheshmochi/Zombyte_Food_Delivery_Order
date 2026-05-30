@@ -1,0 +1,209 @@
+/* =========================
+   PLACE ORDER - MODERN UI
+========================= */
+
+.place-order{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 70px;
+    padding: 40px 8%;
+    animation: fadeIn 0.8s ease;
+}
+
+/* =========================
+   LEFT SECTION
+========================= */
+
+.place-order-left{
+    flex: 1;
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 40px;
+    border-radius: 28px;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(18px);
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow Effect */
+
+.place-order-left::before{
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgba(255,99,71,0.15);
+    border-radius: 50%;
+    top: -80px;
+    right: -80px;
+    filter: blur(40px);
+    animation: floating 6s infinite ease-in-out;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.place-order-left .title{
+    font-size: 38px;
+    font-weight: 800;
+    color: #222;
+    position: relative;
+    z-index: 2;
+    letter-spacing: 0.5px;
+}
+
+.place-order-left .title::after{
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right,tomato,#ffb199);
+    display: block;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+
+/* =========================
+   INPUT FIELDS
+========================= */
+
+.place-order-left input{
+    width: 100%;
+    padding: 16px 18px;
+    border: 1.5px solid rgba(0,0,0,0.08);
+    border-radius: 16px;
+    font-size: 15px;
+    background: rgba(255,255,255,0.9);
+    outline: none;
+    transition: all 0.35s ease;
+    position: relative;
+    z-index: 2;
+    color: #333;
+}
+
+/* Placeholder */
+
+.place-order-left input::placeholder{
+    color: #888;
+    transition: 0.3s;
+}
+
+/* Hover */
+
+.place-order-left input:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255,99,71,0.12);
+}
+
+/* Focus */
+
+.place-order-left input:focus{
+    border-color: tomato;
+    background: #fff;
+    box-shadow:
+    0 0 0 4px rgba(255,99,71,0.15),
+    0 8px 20px rgba(255,99,71,0.18);
+    transform: scale(1.01);
+}
+
+.place-order-left input:focus::placeholder{
+    opacity: 0.5;
+}
+
+/* =========================
+   MULTI INPUTS
+========================= */
+
+.multi-fields{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.multi-fields input{
+    flex: 1;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 992px){
+
+    .place-order{
+        flex-direction: column;
+        padding: 40px 5%;
+    }
+
+    .place-order-left{
+        width: 100%;
+    }
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 600px){
+
+    .place-order{
+        gap: 40px;
+        padding: 25px 15px;
+    }
+
+    .place-order-left{
+        padding: 25px 18px;
+        border-radius: 22px;
+    }
+
+    .place-order-left .title{
+        font-size: 28px;
+    }
+
+    .multi-fields{
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .place-order-left input{
+        padding: 14px 14px;
+        border-radius: 14px;
+        font-size: 14px;
+    }
+}

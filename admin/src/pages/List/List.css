@@ -1,0 +1,88 @@
+/* Main container */
+.list {
+  width: 100%;
+  padding: clamp(10px, 2vw, 25px);
+  box-sizing: border-box;
+}
+
+/* Title */
+.list > p {
+  font-size: clamp(16px, 2vw, 24px);
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Table wrapper */
+.list-table {
+  width: 100%;
+  overflow-x: auto; /* only scroll if extremely small screen */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Row */
+.list-table-format {
+  display: grid;
+  grid-template-columns: 80px 2fr 2fr 1fr 80px;
+  align-items: center;
+  gap: clamp(8px, 1vw, 15px);
+  padding: clamp(8px, 1.5vw, 15px);
+  border-bottom: 1px solid #eee;
+  transition: 0.2s;
+}
+
+/* Header */
+.list-table-format.title {
+  background: #f8f8f8;
+  font-weight: 600;
+}
+
+/* Image */
+.list-table-format img {
+  width: clamp(40px, 5vw, 70px);
+  height: clamp(40px, 5vw, 70px);
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Text */
+.list-table-format p {
+  font-size: clamp(12px, 1.5vw, 16px);
+  color: #444;
+  word-break: break-word;
+}
+
+/* Delete button */
+.cursor {
+  cursor: pointer;
+  color: #ff4d4f;
+  font-weight: bold;
+  text-align: center;
+  font-size: clamp(14px, 2vw, 18px);
+  transition: 0.2s;
+}
+
+.cursor:hover {
+  transform: scale(1.2);
+  color: #d9363e;
+}
+
+/* Hover effect */
+.list-table-format:not(.title):hover {
+  background: #f9f9f9;
+}
+
+/* Smooth scaling for very small screens */
+@media (max-width: 600px) {
+  .list-table-format {
+    grid-template-columns: 60px 2fr 2fr 1fr 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  .list-table-format {
+    grid-template-columns: 50px 2fr 2fr 1fr 50px;
+  }
+}

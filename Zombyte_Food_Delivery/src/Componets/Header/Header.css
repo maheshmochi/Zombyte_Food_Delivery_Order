@@ -1,0 +1,241 @@
+/* ================= HEADER MAIN ================= */
+
+.header {
+    width: 100%;
+    height: 38vw;
+    min-height: 350px;
+    max-height: 650px;
+
+    margin: 25px auto;
+
+    background: url('/Banner.png') no-repeat center center;
+    background-size: cover;
+
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+/* Dark Overlay */
+
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.65) 0%,
+        rgba(0, 0, 0, 0.45) 40%,
+        rgba(0, 0, 0, 0.15) 100%
+    );
+
+    z-index: 0;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeInUp {
+
+    0% {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= CONTENT ================= */
+
+.header-contents {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 650px;
+
+    padding-left: 6%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* ================= HEADING ================= */
+
+.header-contents h2 {
+    color: #ffffff;
+
+    font-size: clamp(32px, 4vw, 64px);
+    font-weight: 700;
+    line-height: 1.2;
+
+    margin: 0;
+}
+
+/* ================= PARAGRAPH ================= */
+
+.header-contents p {
+    color: #f3f3f3;
+
+    font-size: clamp(14px, 1.1vw, 18px);
+    line-height: 1.7;
+
+    max-width: 600px;
+    margin: 0;
+}
+
+/* ================= BUTTON ================= */
+
+.header-contents button {
+    padding: 13px 30px;
+
+    border: none;
+    outline: none;
+
+    background: #ff5722;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    border-radius: 50px;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.header-contents button:hover {
+    background: #e64a19;
+    transform: translateY(-2px);
+}
+
+/* ================= LARGE TABLET ================= */
+
+@media (max-width: 1100px) {
+
+    .header {
+        height: 48vw;
+        min-height: 420px;
+    }
+
+    .header-contents {
+        max-width: 90%;
+        gap: 16px;
+    }
+
+    .header-contents p {
+        font-size: 15px;
+    }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 850px) {
+
+    .header {
+        height: 60vw;
+        min-height: 450px;
+        border-radius: 18px;
+    }
+
+    .header-contents {
+        max-width: 80%;
+        padding-left: 7%;
+        gap: 14px;
+    }
+
+    .header-contents h2 {
+        font-size: clamp(28px, 5vw, 48px);
+    }
+
+    .header-contents p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .header-contents button {
+        padding: 11px 24px;
+        font-size: 14px;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+
+    .header {
+        height: 80vw;
+        min-height: 500px;
+
+        border-radius: 16px;
+
+        background-position: center;
+    }
+
+    .header::before {
+        background: rgba(0, 0, 0, 0.55);
+    }
+
+    .header-contents {
+        max-width: 90%;
+        padding-left: 6%;
+        gap: 12px;
+    }
+
+    .header-contents h2 {
+        font-size: 34px;
+        line-height: 1.25;
+    }
+
+    .header-contents p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .header-contents button {
+        padding: 10px 22px;
+        font-size: 13px;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .header {
+        height: 95vw;
+        min-height: 540px;
+        border-radius: 14px;
+    }
+
+    .header-contents {
+        max-width: 92%;
+        padding-left: 5%;
+    }
+
+    .header-contents h2 {
+        font-size: 28px;
+    }
+
+    .header-contents p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .header-contents button {
+        padding: 9px 20px;
+        font-size: 12px;
+    }
+}

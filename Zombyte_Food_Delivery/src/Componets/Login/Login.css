@@ -1,0 +1,337 @@
+/* ================= LOGIN OVERLAY ================= */
+
+.login {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    animation: fadeIn 0.3s ease;
+}
+
+/* ================= LOGIN BOX ================= */
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    padding: 32px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.18),
+        0 4px 12px rgba(0, 0, 0, 0.08);
+
+    animation: popup 0.35s ease;
+
+    box-sizing: border-box;
+}
+
+/* ================= TITLE ================= */
+
+.login-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-title h2 {
+    margin: 0;
+
+    color: #222;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.login-title img {
+    width: 22px;
+    height: 22px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.login-title img:hover {
+                transform: rotate(2deg) scale(1.2);
+ 
+
+}
+
+/* ================= INPUT SECTION ================= */
+
+.login-inputs {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+/* Inputs */
+
+.login-inputs input {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border: 1.5px solid #e2e2e2;
+    border-radius: 12px;
+
+    font-size: 15px;
+    color: #333;
+
+    outline: none;
+
+    transition: 0.3s ease;
+
+    box-sizing: border-box;
+
+    background: #fafafa;
+}
+
+/* Focus */
+
+.login-inputs input:focus {
+    border-color: tomato;
+
+    background: #fff;
+
+    box-shadow: 0 0 0 4px rgba(255, 99, 71, 0.1);
+}
+
+/* ================= BUTTON ================= */
+
+.login-container button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, tomato, #ff7b54);
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+/* Hover */
+
+.login-container button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(255, 99, 71, 0.25);
+}
+
+/* ================= CONDITION ================= */
+
+.login-condtion {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+.login-condtion input {
+    margin-top: 3px;
+    accent-color: tomato;
+}
+
+.login-condtion p {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    color: #666;
+}
+
+/* ================= SWITCH TEXT ================= */
+
+.login-container>p {
+    margin: 0;
+
+    text-align: center;
+
+    color: #555;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Span */
+
+.login-container span {
+    color: tomato;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.login-container span:hover {
+    text-decoration: underline;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes popup {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 768px) {
+
+    .login-container {
+        max-width: 380px;
+
+        padding: 28px 24px;
+
+        gap: 22px;
+    }
+
+    .login-title h2 {
+        font-size: 26px;
+    }
+
+    .login-inputs input {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .login-container button {
+        padding: 13px;
+        font-size: 15px;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 550px) {
+
+    .login {
+        padding: 16px;
+    }
+
+    .login-container {
+        max-width: 100%;
+
+        padding: 24px 20px;
+
+        border-radius: 18px;
+
+        gap: 20px;
+    }
+
+    .login-title h2 {
+        font-size: 24px;
+    }
+
+    .login-title img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .login-inputs {
+        gap: 15px;
+    }
+
+    .login-inputs input {
+        padding: 13px 14px;
+
+        font-size: 14px;
+
+        border-radius: 10px;
+    }
+
+    .login-container button {
+        padding: 12px;
+
+        font-size: 14px;
+
+        border-radius: 10px;
+    }
+
+    .login-condtion p {
+        font-size: 12px;
+    }
+
+    .login-container>p {
+        font-size: 13px;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+
+    .login-container {
+        padding: 22px 16px;
+    }
+
+    .login-title h2 {
+        font-size: 22px;
+    }
+
+    .login-inputs input {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .login-container button {
+        font-size: 13px;
+    }
+}
