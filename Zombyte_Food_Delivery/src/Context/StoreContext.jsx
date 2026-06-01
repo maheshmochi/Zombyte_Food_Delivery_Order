@@ -6,7 +6,7 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = ({ children }) => {
 
     // ================= BASE URL =================
-    const url = "https://backend-food-delivery-gnm3.onrender.com/";
+    const url = "https://backend-okuu.onrender.com";
 
     // ================= FOOD LIST =================
     const [foodList, setFoodList] = useState([]);
