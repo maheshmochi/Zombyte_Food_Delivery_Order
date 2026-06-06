@@ -15,4 +15,4 @@ export const assets ={
     parcel_icon,kt
 }
 
-export const url = "https://backend-okuu.onrender.com";
+export const url = "https://backend-e7ic.onrender.com/";
